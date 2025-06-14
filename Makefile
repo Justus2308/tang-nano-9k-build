@@ -72,6 +72,8 @@ clean:
 
 help:
 	@echo "" \
+		"Searches for input files in 'src/'.\n" \
+		"\n" \
 		"USAGE:\n" \
 		"    make [target]\n" \
 		"\n" \
@@ -80,7 +82,8 @@ help:
 		"    load      Build and load pack\n" \
 		"    build     Build loadable pack\n" \
 		"    clean     Remove generated files\n" \
-		"    help      Display this message\n"
+		"    help      Display this message\n" \
+		"    info      Display relevant files"
 
 info:
 	@echo "" \
@@ -88,7 +91,7 @@ info:
 	"    $(notdir $(IN_VERILOG_SOURCES))\n" \
 	"\n" \
 	"DETECTED CONSTRAINTS:\n" \
-	"    $(notdir $(IN_CST))\n" \
+	"    $(shell test -f $(IN_CST) && echo $(notdir $(IN_CST)))\n" \
 	"\n" \
 	"BUILD DIRECTORY:\n" \
 	"    $(OUT_DIR)"
