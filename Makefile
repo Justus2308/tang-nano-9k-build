@@ -87,14 +87,14 @@ help:
 
 info:
 	@echo "" \
-	"DETECTED SOURCES:\n" \
-	"    $(notdir $(IN_VERILOG_SOURCES))\n" \
-	"\n" \
-	"DETECTED CONSTRAINTS:\n" \
-	"    $(shell test -f $(IN_CST) && echo $(notdir $(IN_CST)))\n" \
-	"\n" \
-	"BUILD DIRECTORY:\n" \
-	"    $(OUT_DIR)"
+		"DETECTED SOURCES:\n" \
+		"    $(notdir $(IN_VERILOG_SOURCES))\n" \
+		"\n" \
+		"DETECTED CONSTRAINTS:\n" \
+		"    $(shell test -f $(IN_CST) && echo $(notdir $(IN_CST)))\n" \
+		"\n" \
+		"BUILD DIRECTORY:\n" \
+		"    $(OUT_DIR)"
 
 
 .PHONY: all load build clean help info
